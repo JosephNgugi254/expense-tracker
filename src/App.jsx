@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react';
 import React from 'react';
 import './App.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import Header from './components/Header.jsx';
 import SearchBar from './components/Search-bar.jsx';
+import ExpenseForm from './components/Expense-form.jsx';
 
 function App() {
   const [expense, setExpense] = useState({
@@ -63,67 +62,14 @@ function App() {
     <>
       <Header />
       <div id="container">
-        <div id="form-div">
-          <form id="expense-form" onSubmit={handleSubmit}>
-            <h3>Add Expense</h3>
-            <p>Enter your expense details below</p>
-
-            <input type="text"
-              id="name"
-              name="name"
-              placeholder="Enter expense name"
-              value={expense.name}
-              onChange={handleInputChange}
-            />
-            <input
-              type="text"
-              id="description"
-              name="description"
-              placeholder="Enter expense description"
-              value={expense.description}
-              onChange={handleInputChange}
-            />
-            <input
-              type="text"
-              id="category"
-              name="category"
-              placeholder="Enter expense category"
-              value={expense.category}
-              onChange={handleInputChange}
-            />
-            <input
-              type="number"
-              id="amount"
-              name="amount"
-              placeholder="Enter amount"
-              value={expense.amount}
-              onChange={handleInputChange}
-              step="0.01"
-            />
-            <input
-              type="date"
-              id="day"
-              name="day"
-              placeholder="Enter date"
-              value={expense.day}
-              onChange={handleInputChange}
-            />
-            <button type="submit" id="button">Submit</button>
-          </form>
-        </div>
+        <ExpenseForm
+          expense={expense}
+          handleInputChange={handleInputChange}
+          handleSubmit={handleSubmit}
+        />
 
         <div id="search-div">
-          <div id="search-container">
-            <FontAwesomeIcon icon={faMagnifyingGlass} className="search-icon" />
-            <input
-              type="text"
-              id="search-bar"
-              name="search"
-              placeholder="Search expenses"
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-            />
-          </div>
+          <SearchBar />
           <div id="expense-list">
             <table>
               <thead>

@@ -28,7 +28,7 @@ p {
     padding: 1rem;    
 }
 
-#expense-form h3,p {
+#expense-form h3, p {
     display: flex;
     justify-content: left;
     width: 100%;
@@ -55,14 +55,15 @@ input {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
-    margin:0.3rem 0 ;
+    margin: 0.3rem 0;
 }
 
 #container {
     display: flex;
+    width: 100%;
     gap: 1rem;
-    
 }
+
 #search-div {
     display: flex;
     flex-direction: column;
@@ -71,35 +72,47 @@ input {
 
 #search-container {
     position: relative;
-    display: flex;
-    flex-direction: space-between;
-    height: fit-content;
+    display: inline-block;
+    width: 100%;
+    max-width: 300px;
 }
 
-input [id="search-bar"] {
-    display: flex;
-    left: 30px;
+#search-bar {
+    width: 100%;
+    height: 25px;
+    padding: 8px 8px 8px 32px;
+    margin: 0.3rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
 .search-icon {
     position: absolute;
     left: 10px;
-    color: #666;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
     font-size: 16px;
+    pointer-events: none;
 }
 
 #expense-list {
+    width: 100%;
     border-radius: 10px;
 }
 
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    width: 100%;    
-  }
-  
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
 td, th {
-    border: 1px solid #dddddd;
+    border: 1px solid #999393;
     text-align: left;
     padding: 8px;
 }
@@ -113,5 +126,3 @@ th {
 tr:nth-child(even) {
     background-color: #dddddd;
 }
-
-  
