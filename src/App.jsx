@@ -3,6 +3,8 @@ import React from 'react';
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import Header from './components/Header.jsx';
+import SearchBar from './components/Search-bar.jsx';
 
 function App() {
   const [expense, setExpense] = useState({
@@ -15,7 +17,7 @@ function App() {
   const [expenses, setExpenses] = useState([
     { id: 1, name: 'Groceries', description: 'Weekly supermarket shopping', category: 'Food', amount: '75.50', day: '2025-04-10' },
     { id: 2, name: 'Internet Bill', description: 'Monthly broadband service', category: 'Utilities', amount: '59.99', day: '2025-04-05' },
-    { id: 3, name: 'Coffee Shop', description: 'Morning latte', category: 'Dining', amount: '4.50', day: '2025-04-12' },
+    { id: 3, name: 'Coffee Shop', description: 'Morning late', category: 'Dining', amount: '4.50', day: '2025-04-12' },
     { id: 4, name: 'Gas', description: 'Car fuel', category: 'Transportation', amount: '45.00', day: '2025-04-11' },
     { id: 5, name: 'Movie Tickets', description: 'Cinema night', category: 'Entertainment', amount: '30.00', day: '2025-04-09' }
   ]);
@@ -59,10 +61,7 @@ function App() {
 
   return (
     <>
-      <div id="header-div">
-        <h1>Expense Tracker</h1>
-        <p>Start taking control of your finances and life. Record, categorize, and analyze your spending.</p>
-      </div>
+      <Header />
       <div id="container">
         <div id="form-div">
           <form id="expense-form" onSubmit={handleSubmit}>
