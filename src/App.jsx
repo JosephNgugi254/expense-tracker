@@ -152,16 +152,16 @@ function App() {
         <div id="search-div">
           <div id="search-container">
             <FontAwesomeIcon icon={faMagnifyingGlass} className="search-icon" />
-            <input
+            {/* <input
               type="text"
               id="search-bar"
               name="search"
               placeholder="Search expenses"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-            />
+            /> */}
           </div>
-          {/* <div id="expense-list">
+          <div id="expense-list">
             <table>
               <thead>
                 <tr>
@@ -184,7 +184,7 @@ function App() {
                 ))}
               </tbody>
             </table>
-          </div> */}
+          </div>
         </div>
       </div>
     </>
