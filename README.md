@@ -1,12 +1,57 @@
-# React + Vite
+# Expense Tracker App
+## Overview
+The Expense Tracker is a simple web application that allows users to manage their expenses efficiently. It provides an intuitive interface to view, add, and filter expenses.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
 
-Currently, two official plugins are available:
+As a user, you can:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **View Expenses**: See a table of all your expenses.
+- **Add Expenses**: Fill out and submit a form to add a new expense. The new expense will be displayed in the table immediately (no persistence mechanism is required).
+- **Filter Expenses**: Use a search bar to filter expenses. Only expenses with a description or expense name matching the search term will be displayed in the table.
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (version 14 or higher)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+
+### Installation
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/JosephNgugi254/expense-tracker.git
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd expense-tracker
+    ```
+3. Install dependencies:
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
+
+### Running the Application
+
+1. Start the development server:
+    ```bash
+    npm run dev
+    # or
+    yarn dev
+    ```
+2. Open your browser and navigate to `http://localhost:3000`.
+
+
+## Technologies Used
+
+- **React**: Frontend library for building user interfaces.
+- **Vite**: Fast build tool for modern web projects.
+- **CSS**: Styling the application.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
