@@ -13,46 +13,11 @@ function App() {
     day: ''
   });
   const [expenses, setExpenses] = useState([
-    {
-      id: 1,
-      name: 'Groceries',
-      description: 'Weekly supermarket shopping',
-      category: 'Food',
-      amount: '75.50',
-      day: '2025-04-10'
-    },
-    {
-      id: 2,
-      name: 'Internet Bill',
-      description: 'Monthly broadband service',
-      category: 'Utilities',
-      amount: '59.99',
-      day: '2025-04-05'
-    },
-    {
-      id: 3,
-      name: 'Coffee Shop',
-      description: 'Morning latte',
-      category: 'Dining',
-      amount: '4.50',
-      day: '2025-04-12'
-    },
-    {
-      id: 4,
-      name: 'Gas',
-      description: 'Car fuel',
-      category: 'Transportation',
-      amount: '45.00',
-      day: '2025-04-11'
-    },
-    {
-      id: 5,
-      name: 'Movie Tickets',
-      description: 'Cinema night',
-      category: 'Entertainment',
-      amount: '30.00',
-      day: '2025-04-09'
-    }
+    { id: 1, name: 'Groceries', description: 'Weekly supermarket shopping', category: 'Food', amount: '75.50', day: '2025-04-10' },
+    { id: 2, name: 'Internet Bill', description: 'Monthly broadband service', category: 'Utilities', amount: '59.99', day: '2025-04-05' },
+    { id: 3, name: 'Coffee Shop', description: 'Morning latte', category: 'Dining', amount: '4.50', day: '2025-04-12' },
+    { id: 4, name: 'Gas', description: 'Car fuel', category: 'Transportation', amount: '45.00', day: '2025-04-11' },
+    { id: 5, name: 'Movie Tickets', description: 'Cinema night', category: 'Entertainment', amount: '30.00', day: '2025-04-09' }
   ]);
   const [search, setSearch] = useState('');
   const [filteredExpenses, setFilteredExpenses] = useState(expenses);
@@ -104,8 +69,7 @@ function App() {
             <h3>Add Expense</h3>
             <p>Enter your expense details below</p>
 
-            <input
-              type="text"
+            <input type="text"
               id="name"
               name="name"
               placeholder="Enter expense name"
